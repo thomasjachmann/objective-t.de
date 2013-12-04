@@ -1,9 +1,27 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<article class="post type-post status-publish format-standard hentry">
+  <header class="entry-header">
+    <h1 class="entry-title">
+      <a href="{{ page.url }}" rel="bookmark">{{ page.title }}</a>
+    </h1>
+
+    <div class="entry-meta">
+      <span class="date"><a href="{{ page.url }}" title="Permalink to {{ page.title }}" rel="bookmark"><time class="entry-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time></a></span>
+    </div>
+  </header>
+
+  <div class="entry-content">
+    {{ content }}
+  </div>
+</article>
+
+<!--<nav class="navigation post-navigation" role="navigation">-->
+  <!--<h1 class="screen-reader-text">Post navigation</h1>-->
+  <!--<div class="nav-links">-->
+    <!--<a href="http://objective-t.de/2009/05/11/using-gitosis-on-dreamhost/" rel="prev"><span class="meta-nav">&larr;</span> Using Gitosis on DreamHost</a>-->
+    <!--<a href="http://objective-t.de/2009/06/05/out-of-office/" rel="next">Out of Office <span class="meta-nav">&rarr;</span></a>-->
+  <!--</div>-->
+<!--</nav>-->

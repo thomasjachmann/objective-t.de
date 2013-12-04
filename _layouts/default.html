@@ -1,44 +1,79 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<!--[if IE 7]>
+<html class="ie ie7" lang="de-DE">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="de-DE">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="de-DE">
+<!--<![endif]-->
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <!--<title>{{ page.title }}</title>-->
+  <title>{{ site.name }} | {{ site.tagline }}</title>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
 
-    </head>
-    <body>
+  <!--[if lt IE 9]>
+    <script src="/themes/twentythirteen/js/html5.js"></script>
+  <![endif]-->
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+  <!--<link rel="alternate" type="application/rss+xml" title="Objective-T &raquo; Feed" href="http://objective-t.de/feed/" />-->
+  <!--<link rel="alternate" type="application/rss+xml" title="Objective-T &raquo; Comments Feed" href="http://objective-t.de/comments/feed/" />-->
 
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+  <!--<link rel='stylesheet' href='/css/wp-syntax.css' type='text/css' media='all' />-->
+  <link rel='stylesheet' href='/themes/twentythirteen/fonts/genericons.css' type='text/css' media='all' />
+  <link rel='stylesheet' href='/themes/twentythirteen/style.css' type='text/css' media='all' />
+  <!--[if lt IE 9]>
+    <link rel='stylesheet' href='/themes/twentythirteen/css/ie.css' type='text/css' media='all' />
+  <![endif]-->
+
+  <style type="text/css">
+    .site-header {
+      background: url(/themes/twentythirteen/images/headers/star.png) no-repeat scroll top;
+      background-size: 1600px auto;
+    }
+  </style>
+</head>
+
+<body class="home blog single-author">
+  <div id="page" class="hfeed site">
+    <header id="masthead" class="site-header" role="banner">
+      <a class="home-link" href="/" title="Objective-T" rel="home">
+        <h1 class="site-title">{{ site.name }}</h1>
+        <h2 class="site-description">{{ site.tagline }}</h2>
+      </a>
+
+      <div id="navbar" class="navbar">
+        <nav id="site-navigation" class="navigation main-navigation" role="navigation">
+          &nbsp;
+        </nav>
+      </div>
+    </header>
+
+    <div id="main" class="site-main">
+
+      <div id="primary" class="content-area">
+        <div id="content" class="site-content" role="main">
           {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
         </div>
+      </div>
 
-    </body>
+
+      </div>
+        <footer id="colophon" class="site-footer" role="contentinfo">
+          <div id="secondary" class="sidebar-container" role="complementary"></div>
+          <div class="site-info"></div>
+        </footer>
+      </div>
+
+    </div>
+  </div>
+</body>
 </html>
